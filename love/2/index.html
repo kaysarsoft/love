@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>turakiz</title>
+    <link rel="shortcut icon" href="https://pic.imgdb.cn/item/66449ed60ea9cb1403009d90.png">
     <link rel="stylesheet" href="style.css">
-    <audio src="http://m701.music.126.net/20260217181047/d2cdb3f8cc75910e53720b379fb912f9/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/62119322361/15f2/4286/aff0/6917a9871f05396bd59137b35fcc0c3d.mp3?vuutv=NMTsys2F0a3VwFbGnVSvdBrYZP6/UIK/Drwr5GAYcdGLViAAv+RzYWhJq1HI8F5JbrJsF6tGANQyAd5Qehb2mfSo0JDgKpue2Zlt7kOqOtCwTrdu0qKuCgz46xUeVRsd5MENe4GZzTh19nSi9npTZw==&cdntag=bWFyaz1vc193ZWIscXVhbGl0eV9zdGFuZGFyZA" autoplay loop>
-    </audio>
+    <!-- 音乐播放器开始 -->
+    <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdmirror.cn/npm/aplayer/dist/APlayer.min.css">
+    <script src="https://cdn.jsdmirror.cn/npm/aplayer/dist/APlayer.min.js"></script>
+    <!-- require MetingJS -->
+    <script src="https://cdn.jsdmirror.com/gh/lemonmous/Source-material@1.0/js/Meting.min.js"></script>
+    <meting-js fixed="true" autoplay="true" theme="#409EFF" list-folded="true" mini="true"
+        auto="https://music.163.com/#/song?id=2739463382"></meting-js>
+     <style>
+        .aplayer-body {display: none!important;}
+    </style>
+    <!-- 音乐播放器结束 -->
 </head>
 <body>
+</div>
     <div class="container">
-
-        
         <div class="content">
             <div class="love-message">
                 <h2>❤❤turakiz❤❤</h2>
@@ -26,9 +37,9 @@
                 <p>愿我们的爱情像骏马一样勇往直前，</p>
                 <p>在新的一年里马到成功，幸福美满！</p>
             </div>
-            
+
             <div class="countdown">
-                
+
                 <div class="wechat-time">
                     <h4>我们已经成为微信好友</h4>
                     <div id="wechat-timer"></div>
@@ -41,25 +52,26 @@
             </div>
         </div>
     </div>
-    
+
     <script>
         // 计算加微信时间
         function updateWechatTime() {
             const wechatTime = new Date('2026-02-10 07:22:00');
             const now = new Date();
             const diff = now - wechatTime;
-            
+
             const days = Math.floor(diff / (1000 * 60 * 60 * 24));
             const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-            
-            document.getElementById('wechat-timer').innerHTML = 
+
+            document.getElementById('wechat-timer').innerHTML =
                 `${days}天 ${hours}时 ${minutes}分 ${seconds}秒`;
         }
-        
+
         updateWechatTime();
         setInterval(updateWechatTime, 1000);
     </script>
 </body>
+
 </html>

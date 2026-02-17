@@ -30,33 +30,7 @@ body {
     backdrop-filter: blur(10px);
 }
 
-/* 头部样式 */
-.header {
-    text-align: center;
-    margin-bottom: 40px;
-    padding-bottom: 20px;
-    border-bottom: 3px solid #ff6b6b;
-}
 
-.header h1 {
-    font-size: 2.5em;
-    color: #e63946;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-
-.header p {
-    font-size: 1.2em;
-    color: #457b9d;
-    font-style: italic;
-}
 
 /* 内容样式 */
 .content {
@@ -66,35 +40,12 @@ body {
     gap: 40px;
 }
 
-/* 马年动画 */
-.horse-animation {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background: linear-gradient(45deg, #ffd93d, #ff9a3c);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 20px rgba(255, 217, 61, 0.5);
-    animation: rotate 10s linear infinite;
-}
-
-@keyframes rotate {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-.horse-animation img {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    object-fit: cover;
-    animation: bounce 2s ease-in-out infinite;
-}
-
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+.small-heart {
+    font-size: 24px;
+    color: #e63946;
+    text-shadow: 0 0 10px rgba(230, 57, 70, 0.5);
+    margin-right: 0px;
+    animation: pulse 2s infinite;
 }
 
 /* 表白信息 */
@@ -154,14 +105,41 @@ body {
     margin-bottom: 15px;
 }
 
-#countdown-timer {
-    font-size: 1.5em;
+.wechat-message {
+    font-size: 1.1em;
+    color: #457b9d;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.wechat-message p {
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.wechat-time {
+    text-align: center;
+}
+
+.wechat-time h4 {
+    font-size: 1.2em;
+    color: #1d3557;
+    margin-bottom: 15px;
+}
+
+#wechat-timer {
+    font-size: 1.3em;
     font-weight: bold;
     color: #e63946;
     background: white;
     padding: 15px;
     border-radius: 10px;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: pulse 2s infinite;
 }
 
 /* 页脚 */
@@ -181,20 +159,6 @@ body {
         padding: 20px;
     }
     
-    .header h1 {
-        font-size: 2em;
-    }
-    
-    .horse-animation {
-        width: 150px;
-        height: 150px;
-    }
-    
-    .horse-animation img {
-        width: 120px;
-        height: 120px;
-    }
-    
     #countdown-timer {
         font-size: 1.2em;
     }
@@ -202,7 +166,7 @@ body {
 
 /* 额外的装饰元素 */
 .container::before {
-    content: '🐎';
+    content: '❤️';
     position: absolute;
     top: -20px;
     left: 20px;

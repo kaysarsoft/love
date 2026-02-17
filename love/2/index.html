@@ -3,23 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026马年表白</title>
+    <title>turakiz</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>2026 马年表白</h1>
-            <p>马到成功 · 心有所属</p>
-        </div>
+
         
         <div class="content">
-            <div class="horse-animation">
-                <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cartoon%20horse%20character%20with%20heart%20shape%20eyes%20happy%20cute%20style&image_size=square" alt="马年吉祥物">
-            </div>
-            
             <div class="love-message">
-                <h2>亲爱的，</h2>
+                <h2>❤❤turakiz❤❤</h2>
                 <p>2026年是马年，一个充满活力和希望的年份。</p>
                 <p>就像骏马奔腾，我的心也一直在向你靠近。</p>
                 <p>马年大吉，我想对你说：</p>
@@ -33,38 +26,38 @@
             </div>
             
             <div class="countdown">
-                <h3>马年倒计时</h3>
-                <div id="countdown-timer"></div>
+                
+                <div class="wechat-time">
+                    <h4>我们已经成为微信好友</h4>
+                    <div id="wechat-timer"></div>
+                </div>
+                <div class="wechat-message">
+                    <p>从此，我们的联系更加紧密</p>
+                    <p>微信的每一次消息，都是我对你的思念</p>
+                    <p>愿我们的友谊/爱情像微信一样，时刻相连</p>
+                </div>
             </div>
-        </div>
-        
-        <div class="footer">
-            <p>© 2026 马年表白网页</p>
         </div>
     </div>
     
     <script>
-        // 马年倒计时
-        function updateCountdown() {
+        // 计算加微信时间
+        function updateWechatTime() {
+            const wechatTime = new Date('2026-02-10 07:22:00');
             const now = new Date();
-            const horseYear = new Date('2026-02-07'); // 2026年春节
-            const diff = horseYear - now;
+            const diff = now - wechatTime;
             
-            if (diff > 0) {
-                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-                
-                document.getElementById('countdown-timer').innerHTML = 
-                    `${days}天 ${hours}时 ${minutes}分 ${seconds}秒`;
-            } else {
-                document.getElementById('countdown-timer').innerHTML = '马年已经到来！';
-            }
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('wechat-timer').innerHTML = 
+                `${days}天 ${hours}时 ${minutes}分 ${seconds}秒`;
         }
         
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
+        updateWechatTime();
+        setInterval(updateWechatTime, 1000);
     </script>
 </body>
 </html>

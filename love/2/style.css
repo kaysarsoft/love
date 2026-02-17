@@ -1,3 +1,4 @@
+/* 全局样式 */
 * {
     margin: 0;
     padding: 0;
@@ -6,216 +7,219 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #333;
+    line-height: 1.6;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+/* 头部样式 */
+.header {
     text-align: center;
-    position: relative;
-    z-index: 2;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #ff6b6b;
 }
 
-h1 {
-    color: #fff;
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 2s ease-in-out;
+.header h1 {
+    font-size: 2.5em;
+    color: #e63946;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: pulse 2s infinite;
 }
 
-.message {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-    max-width: 500px;
-    margin: 0 auto;
-    animation: slideUp 1.5s ease-out;
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
 }
 
-p {
-    color: #333;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+.header p {
+    font-size: 1.2em;
+    color: #457b9d;
+    font-style: italic;
 }
 
-.heart-button {
-    background-color: #ff4b5c;
+/* 内容样式 */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+/* 马年动画 */
+.horse-animation {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ffd93d, #ff9a3c);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(255, 217, 61, 0.5);
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.horse-animation img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* 表白信息 */
+.love-message {
+    text-align: center;
+    max-width: 600px;
+}
+
+.love-message h2 {
+    font-size: 1.8em;
+    color: #e63946;
+    margin-bottom: 20px;
+}
+
+.love-message p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: #457b9d;
+}
+
+.highlight {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e53);
     color: white;
-    border: none;
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(255, 75, 92, 0.4);
-    position: relative;
-    overflow: hidden;
-}
-
-.heart-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(255, 75, 92, 0.6);
-}
-
-.music-control {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    z-index: 100;
-    transition: all 0.3s ease;
-}
-
-.music-control:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.heart-button:before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(
-        to right, 
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.3) 50%,
-        rgba(255, 255, 255, 0) 100%
-    );
-    transform: rotate(30deg);
-    animation: shine 3s infinite;
-}
-
-.hearts-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.heart {
-    position: absolute;
-    width: 20px;
-    height: 19px;
-    background-color: #ff4b5c;
-    transform: rotate(45deg);
-    opacity: 0;
-    animation: floatHeart 5s linear infinite;
-}
-
-.heart:before, .heart:after {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 19px;
-    background-color: #ff4b5c;
-    border-radius: 50%;
-}
-
-.heart:before {
-    top: -10px;
-    left: 0;
-}
-
-.heart:after {
-    top: 0;
-    left: -10px;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes shine {
-    0% {
-        transform: translateX(-100%) rotate(30deg);
-    }
-    100% {
-        transform: translateX(100%) rotate(30deg);
-    }
-}
-
-@keyframes floatHeart {
-    0% {
-        transform: translateY(100vh) rotate(45deg);
-        opacity: 0.8;
-    }
-    100% {
-        transform: translateY(-100px) rotate(45deg);
-        opacity: 0;
-    }
-}
-
-.hidden-message {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 3rem;
+    padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    z-index: 10;
-    max-width: 80%;
-    animation: popUp 0.5s ease-out;
+    margin: 20px 0;
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+    animation: glow 2s ease-in-out infinite alternate;
 }
 
-@keyframes popUp {
-    from {
-        transform: translate(-50%, -50%) scale(0.5);
-        opacity: 0;
-    }
-    to {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 1;
-    }
+@keyframes glow {
+    from { box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3); }
+    to { box-shadow: 0 5px 25px rgba(255, 107, 107, 0.6); }
 }
 
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
+.highlight p {
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* 倒计时 */
+.countdown {
+    text-align: center;
+    background: #f1faee;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 5;
+    max-width: 400px;
+}
+
+.countdown h3 {
+    font-size: 1.3em;
+    color: #1d3557;
+    margin-bottom: 15px;
+}
+
+#countdown-timer {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #e63946;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 页脚 */
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #4ecdc4;
+    color: #6c757d;
+    font-size: 0.9em;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 20px;
+    }
+    
+    .header h1 {
+        font-size: 2em;
+    }
+    
+    .horse-animation {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .horse-animation img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    #countdown-timer {
+        font-size: 1.2em;
+    }
+}
+
+/* 额外的装饰元素 */
+.container::before {
+    content: '🐎';
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    font-size: 40px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.container::after {
+    content: '❤️';
+    position: absolute;
+    top: -20px;
+    right: 20px;
+    font-size: 40px;
+    animation: float 3s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }

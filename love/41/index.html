@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://pic.imgdb.cn/item/66449ed60ea9cb1403009d90.png">
+    <title>爱的告白</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 音乐播放器开始 -->
+    <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdmirror.cn/npm/aplayer/dist/APlayer.min.css">
+    <script src="https://cdn.jsdmirror.cn/npm/aplayer/dist/APlayer.min.js"></script>
+    <!-- require MetingJS -->
+    <script src="https://cdn.jsdmirror.com/gh/lemonmous/Source-material@1.0/js/Meting.min.js"></script>
+    <meting-js fixed="true" autoplay="true" theme="#409EFF" list-folded="true" mini="true"
+        auto="https://music.163.com/#/song?id=2724329837"></meting-js>
+     <style>
+        .aplayer-body {display: none!important;}
+    </style>
+    <!-- 音乐播放器结束 -->
+</head>
+<body>
+    <button id="music-control" class="music-control">🎵</button>
+    <div class="hearts-container" id="hearts-container"></div>
+    <div class="container">
+        <h1>致我最爱的人</h1>
+        <div class="message">
+            <p>当我第一次看到到你的照片，我的世界就变得不一样了。你的笑容像阳光一样温暖，你的眼睛像星星一样明亮。</p>
+            <p>和你在一起聊天的的每一天，都是我生命中最美好的时光。我想和你一起看无数次日出日落，一起走过四季变换。</p>
+            <button class="heart-button" id="confess-button">打开我的心</button>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="hidden-message" id="hidden-message">
+        <h2 style="color: #ff4b5c; margin-bottom: 1.5rem;">我对你的爱</h2>
+        <p style="font-size: 1.3rem; line-height: 1.8;">亲爱的，</p>
+        <p style="font-size: 1.3rem; line-height: 1.8;">我无法用言语完全表达我对你的爱。它比海洋更深，比天空更广。</p>
+        <p style="font-size: 1.3rem; line-height: 1.8;">你是我生命中最美好的礼物，我珍惜和你在一起的每一刻。</p>
+        <p style="font-size: 1.5rem; font-weight: bold; margin-top: 2rem; color: #ff4b5c;">我爱你，永远永远。</p>
+        <button class="heart-button" style="margin-top: 2rem;" id="close-button">爱你</button>
+    </div>
+
+    <script>
+        // 创建漂浮的心形
+        function createHearts() {
+            const container = document.getElementById('hearts-container');
+            const colors = ['#ff4b5c', '#ff758f', '#ff8fa3', '#fda4af'];
+            const sizes = [15, 20, 25, 30];
+
+            for (let i = 0; i < 50; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+
+                // 随机大小
+                const size = sizes[Math.floor(Math.random() * sizes.length)];
+                heart.style.width = `${size}px`;
+                heart.style.height = `${size - 1}px`;
+                heart.style.left = `${Math.random() * 100}vw`;
+                heart.style.top = `${Math.random() * 100}vh`;
+
+                // 随机颜色
+                heart.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                heart.style.setProperty('--heart-color', heart.style.backgroundColor);
+
+                // 随机动画延迟和持续时间
+                const delay = Math.random() * 5;
+                const duration = 5 + Math.random() * 10;
+                heart.style.animationDelay = `${delay}s`;
+                heart.style.animationDuration = `${duration}s`;
+
+                container.appendChild(heart);
+            }
+        }
+
+        // 显示隐藏的消息
+        const confessButton = document.getElementById('confess-button');
+        const hiddenMessage = document.getElementById('hidden-message');
+        const overlay = document.getElementById('overlay');
+        const closeButton = document.getElementById('close-button');
+
+        confessButton.addEventListener('click', () => {
+            overlay.style.display = 'block';
+            hiddenMessage.style.display = 'block';
+        });
+
+        closeButton.addEventListener('click', () => {
+            overlay.style.display = 'none';
+            hiddenMessage.style.display = 'none';
+        });
+
+        // 页面加载时创建心形并播放音乐
+        window.addEventListener('load', () => {
+            createHearts();
+            
+            // 尝试自动播放音乐
+            const music = document.getElementById('background-music');
+            music.volume = 0.2; // 设置音量为20%
+            
+            // 即使有autoplay属性，仍需调用play()以确保在所有浏览器中都能播放
+            music.play().catch(error => {
+                console.log('音乐自动播放被阻止:', error);
+                // 如果自动播放被阻止，用户点击按钮时再播放
+                document.getElementById('music-control').addEventListener('click', toggleMusic);
+            });
+        });
+
+        // 音乐控制函数
+        function toggleMusic() {
+            const music = document.getElementById('background-music');
+            const controlBtn = document.getElementById('music-control');
+            if (music.paused) {
+                music.play();
+                controlBtn.textContent = '🔊';
+            } else {
+                music.pause();
+                controlBtn.textContent = '🔇';
+            }
+        }
+
+        // 添加音乐控制按钮事件监听
+        document.getElementById('music-control').addEventListener('click', toggleMusic);
+
+        // 点击"打开我的心"按钮时也播放音乐
+        document.getElementById('confess-button').addEventListener('click', () => {
+            const music = document.getElementById('background-music');
+            if (music.paused) {
+                music.play();
+                document.getElementById('music-control').textContent = '🔊';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -6,13 +6,20 @@
     <link rel="shortcut icon" href="https://pic.imgdb.cn/item/66449ed60ea9cb1403009d90.png">
     <title>爱的告白</title>
     <link rel="stylesheet" href="style.css">
+    <!-- 音乐播放器开始 -->
+    <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdmirror.cn/npm/aplayer/dist/APlayer.min.css">
+    <script src="https://cdn.jsdmirror.cn/npm/aplayer/dist/APlayer.min.js"></script>
+    <!-- require MetingJS -->
+    <script src="https://cdn.jsdmirror.com/gh/lemonmous/Source-material@1.0/js/Meting.min.js"></script>
+    <meting-js fixed="true" autoplay="true" theme="#409EFF" list-folded="true" mini="true"
+        auto="https://music.163.com/#/song?id=2724329837"></meting-js>
+     <style>
+        .aplayer-body {display: none!important;}
     </style>
+    <!-- 音乐播放器结束 -->
 </head>
 <body>
-    <audio id="background-music" loop autoplay>
-        <source src="http://music.163.com/song/media/outer/url?id=2724329837.mp3" type="audio/mpeg">
-        您的浏览器不支持音频元素。
-    </audio>
     <button id="music-control" class="music-control">🎵</button>
     <div class="hearts-container" id="hearts-container"></div>
     <div class="container">

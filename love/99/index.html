@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- 声明文档类型为 HTML5 -->
+<html lang="en">
+
+<head>
+      <!-- 元信息设置 -->
+      <meta charset="UTF-8"> <!-- 设置字符集为 UTF-8 -->
+      <title>我爱你</title> <!-- 页面标题，显示在浏览器标签栏 -->
+      <meta name="language" content="zh-CN"> <!-- 设置语言为中文 -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 设置视口，确保在移动设备上正确显示 -->
+      <link rel="shortcut icon" href="https://pic.imgdb.cn/item/66449ed60ea9cb1403009d90.png"> <!-- 设置网站图标为心形图标 -->
+      <link rel="stylesheet" href="style.css" /> <!-- 引入本地样式文件 -->
+      <!-- 音乐播放器开始 -->
+    <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdmirror.cn/npm/aplayer/dist/APlayer.min.css"> <!-- 引入 APlayer 样式 -->
+    <script src="https://cdn.jsdmirror.cn/npm/aplayer/dist/APlayer.min.js"></script> <!-- 引入 APlayer 脚本 -->
+    <!-- require MetingJS -->
+    <script src="https://cdn.jsdmirror.com/gh/lemonmous/Source-material@1.0/js/Meting.min.js"></script> <!-- 引入 MetingJS 脚本 -->
+    <meting-js fixed="true" autoplay="true" theme="#409EFF" list-folded="true" mini="true"
+        auto="https://music.163.com/#/song?id=463840964"></meting-js> <!-- 配置音乐播放器，自动播放指定歌曲 -->
+     <style>
+        .aplayer-body {display: none!important;} /* 隐藏播放器主体，只保留控制按钮 */
+    </style>
+    <!-- 音乐播放器结束 -->
+</head>
+<body>
+      <!-- 背景容器 -->
+      <div class="bj">
+            <meta charset="UTF-8"> <!-- 再次设置字符集，冗余但无害 -->
+            <center> <!-- 居中对齐 -->
+                  <!-- <h1>红红火火 恍恍惚惚</h1> 标题 -->
+            </center>
+            <marquee scrollamout="1" scrolldelay="1"> <!-- 滚动字幕效果 -->
+                  <div>
+                        <img src="images/1.png" height="300" width="300"> <!-- 图片1 -->
+                        <img src="images/2.png" height="300" width="300"> <!-- 图片2 -->
+                        <!-- <img src="images/3.jpg" height="300" width="300"> --> <!-- 注释掉的图片3 -->
+                        <img src="images/4.jpg" height="300" width="300"> <!-- 图片4 -->
+                        <img src="images/5.jpg" height="300" width="300"> <!-- 图片5 -->
+                        <img src="images/6.jpg" height="300" width="300"> <!-- 图片6 -->
+                        <img src="images/7.jpg" height="300" width="300"> <!-- 图片7 -->
+                        <img src="images/8.png" height="300" width="300"> <!-- 图片8 -->
+                  </div>
+            </marquee>
+      </div>
+      <!-- 注释掉的音频标签 -->
+      <!-- <audio autoplay="autopaly" loop="loop" id="audios" preload="auto">
+            <source src="http://music.163.com/song/media/outer/url?id=463840964.mp3" />
+      </audio> -->
+</body>
+
+</html>

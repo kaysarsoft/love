@@ -1,189 +1,212 @@
-/* 全局样式 */
+/* 全局样式重置 */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* 盒模型设置为border-box，确保padding和border不影响元素宽度 */
 }
 
+/* 页面主体样式 */
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
-    color: #333;
-    line-height: 1.6;
+    font-family: 'Arial', sans-serif; /* 设置字体为Arial */
+    background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1); /* 线性渐变背景 */
+    background-size: 400% 400%; /* 背景大小设置为400%，用于动画效果 */
+    animation: gradientBG 15s ease infinite; /* 背景渐变动画，15秒循环一次 */
+    color: #333; /* 文字颜色 */
+    line-height: 1.6; /* 行高设置 */
 }
 
+/* 背景渐变动画定义 */
 @keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% { background-position: 0% 50%; } /* 起始位置 */
+    50% { background-position: 100% 50%; } /* 中间位置 */
+    100% { background-position: 0% 50%; } /* 结束位置，回到起始 */
 }
 
+/* 主容器样式 */
 .container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
+    max-width: 800px; /* 最大宽度800px */
+    margin: 50px auto; /* 上下外边距50px，水平居中 */
+    padding: 30px; /* 内边距30px */
+    background: rgba(255, 255, 255, 0.95); /* 半透明白色背景 */
+    border-radius: 20px; /* 圆角边框20px */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+    backdrop-filter: blur(10px); /* 背景模糊效果 */
 }
 
 
 
-/* 内容样式 */
+/* 内容区域样式 */
 .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
+    display: flex; /* 使用flex布局 */
+    flex-direction: column; /* 垂直排列元素 */
+    align-items: center; /* 水平居中 */
+    gap: 40px; /* 元素间距40px */
 }
 
+/* 小爱心样式 */
 .small-heart {
-    font-size: 24px;
-    color: #e63946;
-    text-shadow: 0 0 10px rgba(230, 57, 70, 0.5);
+    font-size: 24px; /* 字体大小24px */
+    color: #e63946; /* 红色爱心 */
+    text-shadow: 0 0 10px rgba(230, 57, 70, 0.5); /* 文本阴影效果 */
     margin-right: 0px;
-    animation: pulse 2s infinite;
+    animation: pulse 2s infinite; /* 脉冲动画效果 */
 }
 
-/* 表白信息 */
+/* 表白信息区域样式 */
 .love-message {
-    text-align: center;
-    max-width: 600px;
+    text-align: center; /* 文本居中 */
+    max-width: 600px; /* 最大宽度600px */
 }
 
+/* 表白信息标题样式 */
 .love-message h2 {
-    font-size: 1.8em;
-    color: #e63946;
-    margin-bottom: 20px;
+    font-size: 1.8em; /* 字体大小1.8em */
+    color: #e63946; /* 红色文字 */
+    margin-bottom: 20px; /* 底部外边距20px */
 }
 
+/* 表白信息段落样式 */
 .love-message p {
-    font-size: 1.1em;
-    margin-bottom: 15px;
-    color: #457b9d;
+    font-size: 1.1em; /* 字体大小1.1em */
+    margin-bottom: 15px; /* 底部外边距15px */
+    color: #457b9d; /* 蓝色文字 */
 }
 
+/* 高亮区域样式 */
 .highlight {
-    background: linear-gradient(45deg, #ff6b6b, #ff8e53);
-    color: white;
-    padding: 20px;
-    border-radius: 15px;
-    margin: 20px 0;
-    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
-    animation: glow 2s ease-in-out infinite alternate;
+    background: linear-gradient(45deg, #ff6b6b, #ff8e53); /* 线性渐变背景 */
+    color: white; /* 白色文字 */
+    padding: 20px; /* 内边距20px */
+    border-radius: 15px; /* 圆角边框15px */
+    margin: 20px 0; /* 上下外边距20px */
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3); /* 阴影效果 */
+    animation: glow 2s ease-in-out infinite alternate; /* 发光动画效果 */
 }
 
+/* 发光动画定义 */
 @keyframes glow {
-    from { box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3); }
-    to { box-shadow: 0 5px 25px rgba(255, 107, 107, 0.6); }
+    from { box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3); } /* 起始阴影 */
+    to { box-shadow: 0 5px 25px rgba(255, 107, 107, 0.6); } /* 结束阴影，更亮 */
 }
 
+/* 高亮区域段落样式 */
 .highlight p {
-    color: white;
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 10px;
+    color: white; /* 白色文字 */
+    font-size: 1.2em; /* 字体大小1.2em */
+    font-weight: bold; /* 加粗文字 */
+    margin-bottom: 10px; /* 底部外边距10px */
 }
 
-/* 倒计时 */
+/* 倒计时区域样式 */
 .countdown {
-    text-align: center;
-    background: #f1faee;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
+    text-align: center; /* 文本居中 */
+    background: #f1faee; /* 浅蓝绿色背景 */
+    padding: 20px; /* 内边距20px */
+    border-radius: 15px; /* 圆角边框15px */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    width: 100%; /* 宽度100% */
+    max-width: 400px; /* 最大宽度400px */
 }
 
+/* 倒计时标题样式 */
 .countdown h3 {
-    font-size: 1.3em;
-    color: #1d3557;
-    margin-bottom: 15px;
+    font-size: 1.3em; /* 字体大小1.3em */
+    color: #1d3557; /* 深蓝色文字 */
+    margin-bottom: 15px; /* 底部外边距15px */
 }
 
+/* 微信消息区域样式 */
 .wechat-message {
-    font-size: 1.1em;
-    color: #457b9d;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin-bottom: 20px;
+    font-size: 1.1em; /* 字体大小1.1em */
+    color: #457b9d; /* 蓝色文字 */
+    background: white; /* 白色背景 */
+    padding: 20px; /* 内边距20px */
+    border-radius: 10px; /* 圆角边框10px */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* 内阴影效果 */
+    text-align: center; /* 文本居中 */
+    margin-bottom: 20px; /* 底部外边距20px */
 }
 
+/* 微信消息段落样式 */
 .wechat-message p {
-    margin-bottom: 10px;
-    line-height: 1.4;
+    margin-bottom: 10px; /* 底部外边距10px */
+    line-height: 1.4; /* 行高1.4 */
 }
 
+/* 微信时间区域样式 */
 .wechat-time {
-    text-align: center;
+    text-align: center; /* 文本居中 */
 }
 
+/* 微信时间标题样式 */
 .wechat-time h4 {
-    font-size: 1.2em;
-    color: #1d3557;
-    margin-bottom: 15px;
+    font-size: 1.2em; /* 字体大小1.2em */
+    color: #1d3557; /* 深蓝色文字 */
+    margin-bottom: 15px; /* 底部外边距15px */
 }
 
+/* 微信定时器样式 */
 #wechat-timer {
-    font-size: 1.3em;
-    font-weight: bold;
-    color: #e63946;
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
-    animation: pulse 2s infinite;
+    font-size: 1.3em; /* 字体大小1.3em */
+    font-weight: bold; /* 加粗文字 */
+    color: #e63946; /* 红色文字 */
+    background: white; /* 白色背景 */
+    padding: 15px; /* 内边距15px */
+    border-radius: 10px; /* 圆角边框10px */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* 内阴影效果 */
+    animation: pulse 2s infinite; /* 脉冲动画效果 */
 }
 
-/* 页脚 */
+/* 页脚样式 */
 .footer {
-    text-align: center;
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 2px solid #4ecdc4;
-    color: #6c757d;
-    font-size: 0.9em;
+    text-align: center; /* 文本居中 */
+    margin-top: 40px; /* 顶部外边距40px */
+    padding-top: 20px; /* 顶部内边距20px */
+    border-top: 2px solid #4ecdc4; /* 顶部边框 */
+    color: #6c757d; /* 灰色文字 */
+    font-size: 0.9em; /* 字体大小0.9em */
 }
 
 /* 响应式设计 */
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* 当屏幕宽度小于等于768px时 */
     .container {
-        margin: 20px;
-        padding: 20px;
+        margin: 20px; /* 上下外边距20px */
+        padding: 20px; /* 内边距20px */
     }
     
     #countdown-timer {
-        font-size: 1.2em;
+        font-size: 1.2em; /* 字体大小1.2em */
     }
 }
 
 /* 额外的装饰元素 */
 .container::before {
-    content: '❤️';
-    position: absolute;
-    top: -20px;
-    left: 20px;
-    font-size: 40px;
-    animation: float 3s ease-in-out infinite;
+    content: '❤️'; /* 爱心符号 */
+    position: absolute; /* 绝对定位 */
+    top: -20px; /* 顶部位置 */
+    left: 20px; /* 左侧位置 */
+    font-size: 40px; /* 字体大小40px */
+    animation: float 3s ease-in-out infinite; /* 浮动动画效果 */
 }
 
 .container::after {
-    content: '❤️';
-    position: absolute;
-    top: -20px;
-    right: 20px;
-    font-size: 40px;
-    animation: float 3s ease-in-out infinite reverse;
+    content: '❤️'; /* 爱心符号 */
+    position: absolute; /* 绝对定位 */
+    top: -20px; /* 顶部位置 */
+    right: 20px; /* 右侧位置 */
+    font-size: 40px; /* 字体大小40px */
+    animation: float 3s ease-in-out infinite reverse; /* 浮动动画效果，反向 */
 }
 
+/* 浮动动画定义 */
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    0%, 100% { transform: translateY(0); } /* 起始和结束位置 */
+    50% { transform: translateY(-10px); } /* 中间位置，向上浮动10px */
+}
+
+/* 脉冲动画定义 */
+@keyframes pulse {
+    0% { transform: scale(1); } /* 起始大小 */
+    50% { transform: scale(1.05); } /* 中间大小，放大5% */
+    100% { transform: scale(1); } /* 结束大小，回到原始 */
 }

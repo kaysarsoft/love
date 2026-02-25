@@ -1,122 +1,173 @@
 <!DOCTYPE html>
+<!-- 声明文档类型为 HTML5 -->
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=100%, initial-scale=1">
-  <title>kaysar❤turakiz</title>
-  <link rel="shortcut icon" href="https://pic.imgdb.cn/item/66449ed60ea9cb1403009d90.png">
+  <!-- 元信息设置 -->
+  <meta charset="utf-8"> <!-- 设置字符集为 UTF-8 -->
+  <meta name="viewport" content="width=100%, initial-scale=1"> <!-- 设置视口，确保在移动设备上正确显示 -->
+  <title>kaysar❤turakiz</title> <!-- 页面标题，显示在浏览器标签栏 -->
+  <link rel="shortcut icon" href="https://pic.imgdb.cn/item/66449ed60ea9cb1403009d90.png"> <!-- 设置网站图标为心形图标 -->
+  
+  <!-- 外部资源引入 -->
   <!--字体图标样式-->
-  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.7.2/css/all.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.7.2/css/all.css" rel="stylesheet"> <!-- 引入 Font Awesome 图标库 -->
+  <link rel="stylesheet" href="css/style.css"> <!-- 引入本地样式文件 -->
+  
+  <!-- 动态加载爱心特效脚本 -->
   <script>document.addEventListener('DOMContentLoaded', function() {
     var script = document.createElement('script');
     script.src = 'https://cdn.jsdmirror.com/gh/kaysarsoft/texiao@92c819adbf7e4aaa933bc7b711eb51f93169f7f1/aixin/aixin.js';
     document.head.appendChild(script);
 });</script>
-    <!-- 音乐播放器开始 -->
-    <!-- require APlayer -->
-    <link rel="stylesheet" href="https://cdn.jsdmirror.cn/npm/aplayer/dist/APlayer.min.css">
-    <script src="https://cdn.jsdmirror.cn/npm/aplayer/dist/APlayer.min.js"></script>
-    <!-- require MetingJS -->
-    <script src="https://cdn.jsdmirror.com/gh/lemonmous/Source-material@1.0/js/Meting.min.js"></script>
-    <meting-js fixed="true" autoplay="true" theme="#409EFF" list-folded="true" mini="true"
-        auto="https://music.163.com/#/song?id=2101517522"></meting-js>
-     <style>
-        .aplayer-body {display: none!important;}
-    </style>
-    <!-- 音乐播放器结束 -->
+  
+  <!-- 音乐播放器开始 -->
+  <!-- require APlayer -->
+  <link rel="stylesheet" href="https://cdn.jsdmirror.cn/npm/aplayer/dist/APlayer.min.css"> <!-- 引入 APlayer 样式 -->
+  <script src="https://cdn.jsdmirror.cn/npm/aplayer/dist/APlayer.min.js"></script> <!-- 引入 APlayer 脚本 -->
+  <!-- require MetingJS -->
+  <script src="https://cdn.jsdmirror.com/gh/lemonmous/Source-material@1.0/js/Meting.min.js"></script> <!-- 引入 MetingJS 脚本 -->
+  <meting-js fixed="true" autoplay="true" theme="#409EFF" list-folded="true" mini="true"
+        auto="https://music.163.com/#/song?id=2101517522"></meting-js> <!-- 配置音乐播放器，自动播放指定歌曲 -->
+  <style>
+    .aplayer-body {display: none!important;} /* 隐藏播放器主体，只保留控制按钮 */
+  </style>
+  <!-- 音乐播放器结束 -->
 </head>
 
 <body>
+  <!-- 主内容容器 -->
   <div id="content">
+    <!-- 页面标题 -->
     <div id="ti" style="text-align: center;">
-      春风十里不如你！
+      春风十里不如你！ <!-- 主标题 -->
     </div>
+    
+    <!-- 副标题 -->
     <div id="hitokoto">
-  我是你的  你是我的
+      我是你的  你是我的 <!-- 副标题 -->
     </div>
+    
+    <!-- 相爱时间计数器 -->
     <div class="custom">
       <div class="box">
         <font><span id="runtime_span"></span>
-          <script type="text/javascript">function show_runtime() {
-              window.setTimeout("show_runtime()", 1000); X = new
-                Date("@02/10/2026 07:22:00");
-              Y = new Date(); T = (Y.getTime() - X.getTime()); M = 24 * 60 * 60 * 1000;
-              a = T / M; A = Math.floor(a); b = (a - A) * 24; B = Math.floor(b); c = (b - B) * 60; C = Math.floor((b - B) * 60); D = Math.floor((c - C) * 60);
+          <!-- JavaScript 代码：计算并显示相爱时间 -->
+          <script type="text/javascript">
+            function show_runtime() {
+              // 设置定时器，每秒更新一次
+              window.setTimeout("show_runtime()", 1000); 
+              // 设置起始时间（相爱开始时间）
+              X = new Date("@02/10/2026 07:22:00");
+              // 获取当前时间
+              Y = new Date(); 
+              // 计算时间差（毫秒）
+              T = (Y.getTime() - X.getTime()); 
+              // 一天的毫秒数
+              M = 24 * 60 * 60 * 1000;
+              // 计算天、小时、分、秒
+              a = T / M; A = Math.floor(a); 
+              b = (a - A) * 24; B = Math.floor(b); 
+              c = (b - B) * 60; C = Math.floor((b - B) * 60); 
+              D = Math.floor((c - C) * 60);
+              // 更新显示内容
               runtime_span.innerHTML = "我们已经相爱了: " + A + "天" + B + "小时" + C + "分" + D + "秒"
-            } show_runtime();</script>
+            } 
+            // 调用函数，开始计时
+            show_runtime();
+          </script>
           <span id="span_dt"></span>
         </font>
       </div>
     </div>
+    
+    <!-- 爱情宣言 -->
     <div class="box-box">
       <div class="box">
-       ❤️ 忠于对方 相爱对方 理解对方 ❤️
+        ❤️ 忠于对方 相爱对方 理解对方 ❤️ <!-- 爱情宣言 -->
       </div>
     </div>
+    
+    <!-- 个人信息卡片：头像部分 -->
     <div class="main">
+      <!-- 左侧：kaysar 的信息 -->
       <div class="main-1">
         <div class="box">
-          <img class="img" src="https://www.helloimg.com/i/2026/02/20/69982cd8b15a3.jpg">
+          <img class="img" src="https://www.helloimg.com/i/2026/02/20/69982cd8b15a3.jpg"> <!-- kaysar 的头像 -->
           <div class="boxbox">
             <center>
-              <font class="admin"><i></i>kaysar</font>
+              <font class="admin"><i></i>kaysar</font> <!-- kaysar 的名字 -->
             </center>
           </div>
         </div>
       </div>
+      
+      <!-- 右侧：turakiz 的信息 -->
       <div class="main-2">
         <div class="box">
-          <img class="img" src="https://www.helloimg.com/i/2026/02/20/69982cd5e26e6.jpg">
+          <img class="img" src="https://www.helloimg.com/i/2026/02/20/69982cd5e26e6.jpg"> <!-- turakiz 的头像 -->
           <div class="boxbox">
             <center>
-              <font class="admin"><i></i>turakiz</font>
+              <font class="admin"><i></i>turakiz</font> <!-- turakiz 的名字 -->
             </center>
           </div>
         </div>
-        
       </div>
     </div>
+    
     <!-- 下一行 -->
     <br>
+    
+    <!-- 个人信息卡片：详细信息部分 -->
     <div class="main">
+      <!-- 左侧：kaysar 的详细信息 -->
       <div class="main-1">
         <div class="box ju">
           <h4>
-            <font class="zuobiao"><i></i>喀什 · 泽普</font>
-            <!-- <div> kaxkar poskam</div> -->
+            <font class="zuobiao"><i></i>喀什 · 泽普</font> <!-- kaysar 的地点 -->
+            <!-- <div> kaxkar poskam</div> --> <!-- 注释掉的内容 -->
           </h4>
         </div>
         <div class="box">
-          <font class="newweb"><i></i>愿出一家之言，以结两姓之好!<i></i>
+          <font class="newweb"><i></i>愿出一家之言，以结两姓之好!<i></i> <!-- kaysar 的名言1 -->
           </font>
         </div>
-        <div class="box ">你好，能不能借一生说话🎉
+        <div class="box ">你好，能不能借一生说话🎉 <!-- kaysar 的名言2 -->
         </div>
       </div>
+      
+      <!-- 右侧：turakiz 的详细信息 -->
       <div class="main-2">
         <div class="box ju">
           <h4>
-            <font class="zuobiao"><i></i>喀什 · 叶城</font>
-            <!-- <div>kaxkar poskam</div> -->
+            <font class="zuobiao"><i></i>喀什 · 叶城</font> <!-- turakiz 的地点 -->
+            <!-- <div>kaxkar poskam</div> --> <!-- 注释掉的内容 -->
           </h4>
         </div>
         <div class="box">
-          <font class="newweb"><i></i>但愿我和你，是一支唱不完的歌。<i></i>
+          <font class="newweb"><i></i>但愿我和你，是一支唱不完的歌。<i></i> <!-- turakiz 的名言1 -->
           </font>
         </div>
-        <div class="box">遇见你是所有故事的开始🎉</div>
+        <div class="box">遇见你是所有故事的开始🎉 <!-- turakiz 的名言2 -->
+        </div>
       </div>
     </div>
+    
+    <!-- 页脚 -->
     <div class="footer">
-      <!-- <a href=""><br><b>Copyright © 2022 By 凯撒</b><br> </a> -->
+      <!-- <a href=""><br><b>Copyright © 2022 By 凯撒</b><br> </a> --> <!-- 注释掉的版权信息 -->
     </div>
+    
+    <!-- 导航链接 -->
     <div class="foot" style="display: flex; flex-wrap: wrap; max-width: 300px; margin: 0 auto; justify-content: center;">
-      <font><a href="./love/1/" target="_blank"><i></i>1</a></font>
-      <font><a href="./love/2/" target="_blank"><i></i>2</a></font>
-      <font><a href="./love/3/" target="_blank"><i></i>3</a></font>
+      <font><a href="./love/1/" target="_blank"><i></i>1</a></font> <!-- 链接到 love/1/ 页面 -->
+      <font><a href="./love/2/" target="_blank"><i></i>2</a></font> <!-- 链接到 love/2/ 页面 -->
+      <font><a href="./love/3/" target="_blank"><i></i>3</a></font> <!-- 链接到 love/3/ 页面 -->
+      <br>
+      <font><a href="./love/99/" target="_blank"><i></i>99</a><i></i></font> <!-- 链接到 love/99/ 页面 -->
     </div>
+    
+    <!-- 注释掉的音频标签 -->
     <!-- <audio autoplay>
       <source src="http://music.163.com/song/media/outer/url?id=2101517522.mp3" type="audio/mpeg">
     </audio> -->

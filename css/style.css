@@ -1,102 +1,118 @@
+/* 全局样式重置 */
 * {
     margin: 0;
     padding: 0
 }
 
+/* 页面主体样式 */
 body {
     background-color: #FFF;
-    background-image: linear-gradient(180deg, #CBCFFC, #FFF);
-    background-repeat: no-repeat
+    background-image: linear-gradient(180deg, #CBCFFC, #FFF); /* 线性渐变背景 */
+    background-repeat: no-repeat /* 背景不重复 */
 }
 
+/* 字体定义（已注释） */
 /* @font-face {
     font-family: xbc;
     src: url("../fonts/a.ttf")
 } */
 
+/* 页面标题样式 */
 #ti {
     font: 13px xbc, Arial, sans-serif;
-    font-size: 200%;
+    font-size: 200%; /* 字体大小为默认的200% */
     margin: 30px 10px 0px;
-    text-shadow: 5px 5px 5px #909090
+    text-shadow: 5px 5px 5px #909090 /* 文本阴影效果 */
 }
 
+/* 副标题样式 */
 #hitokoto {
     font: 13px xbc, Arial, sans-serif;
-    font-size: 150%;
+    font-size: 150%; /* 字体大小为默认的150% */
     margin: 20px 10px;
     padding: 15px;
     text-align: center;
-    color: #e91e63;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    background: linear-gradient(145deg, #ffffff, #f0f0f0);
-    box-shadow: 5px 5px 10px #d1d1d1, -5px -5px 10px #ffffff;
-    transition: all 0.3s ease;
+    color: #e91e63; /* 粉色文字 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* 文本阴影效果 */
+    border-radius: 10px; /* 圆角边框 */
+    background: linear-gradient(145deg, #ffffff, #f0f0f0); /* 线性渐变背景 */
+    box-shadow: 5px 5px 10px #d1d1d1, -5px -5px 10px #ffffff; /* 立体阴影效果 */
+    transition: all 0.3s ease; /* 过渡动画效果 */
 }
 
+/* 副标题 hover 效果 */
 #hitokoto:hover {
-    transform: scale(1.03);
-    box-shadow: 7px 7px 14px #c8c8c8, -7px -7px 14px #ffffff;
+    transform: scale(1.03); /* 缩放效果 */
+    box-shadow: 7px 7px 14px #c8c8c8, -7px -7px 14px #ffffff; /* 增强阴影效果 */
 }
 
+/* 标题样式 */
 h4 {
     font-family: xbc;
     padding-left: 10px
 }
 
+/* 主内容容器样式 */
 #content {
     width: 95%;
-    max-width: 430px;
+    max-width: 430px; /* 最大宽度430px */
     height: 600px;
-    margin: 0 auto;
+    margin: 0 auto; /* 水平居中 */
 }
 
+/* 盒子容器样式 */
 .box-box {
     text-align: center
 }
 
+/* 顶部盒子样式 */
 .box-top {
     margin: 5px 5px 25px
 }
 
+/* 通用盒子样式 */
 .box {
     text-align: center;
     margin: 5px 5px 10px;
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 10px; /* 圆角边框 */
     background: #FFF;
-    box-shadow: 2px 2px 5px #CBCFFC, -3px -3px 5px #FFF
+    box-shadow: 2px 2px 5px #CBCFFC, -3px -3px 5px #FFF /* 立体阴影效果 */
 }
 
+/* 新网页样式 */
 .newweb hr {
     margin-left: 25px
 }
 
+/* 主容器样式 */
 .main-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    max-width: 700px;
-    margin: 0 auto;
+    display: flex; /* 使用flex布局 */
+    justify-content: center; /* 水平居中 */
+    gap: 20px; /* 元素间距20px */
+    flex-wrap: wrap; /* 自动换行 */
+    max-width: 700px; /* 最大宽度700px */
+    margin: 0 auto; /* 水平居中 */
     padding: 20px;
 }
 
+/* 主内容区域样式 */
 .main {
     width: auto;
     height: 150px;
     padding: 2% 0;
-    flex: 1;
-    min-width: 300px;
+    flex: 1; /* 自动伸缩 */
+    min-width: 300px; /* 最小宽度300px */
 }
 
+/* 左侧内容区域样式 */
 .main-1 {
     width: 40%;
     height: auto;
     float: left
 }
 
+/* 右侧内容区域样式 */
 .main-2 {
     width: 40%;
     height: auto;
@@ -104,135 +120,153 @@ h4 {
     padding-left: 3%
 }
 
+/* 居中元素样式 */
 center {
     margin: 13px;
     font-size: 80%
 }
 
+/* 头像图片样式 */
 .img {
     width: 65%;
     height: 65%;
     margin: 0 auto;
     display: block;
-    border-radius: 10em;
-    box-shadow: 3px 3px 8px 1px silver;
+    border-radius: 10em; /* 圆形头像 */
+    box-shadow: 3px 3px 8px 1px silver; /* 阴影效果 */
     margin-top: 1em;
     align-content: center
 }
 
+/* 底部盒子样式 */
 .box-foot {
     clear: both;
     margin-top: 50px
 }
 
+/* 嵌套盒子样式 */
 .boxbox {
     margin: 0 auto;
     width: 80%;
-    border-radius: 20px;
+    border-radius: 20px; /* 圆角边框 */
     background: #FFF;
-    box-shadow: inset 2px 2px 5px #CBCFFC, inset -3px -3px 5px #FFF
+    box-shadow: inset 2px 2px 5px #CBCFFC, inset -3px -3px 5px #FFF /* 内阴影效果 */
 }
 
+/* 盒子内字体样式 */
 .box-box font {
     text-align: center;
     padding: 8px;
-    border-radius: 50%;
+    border-radius: 50%; /* 圆形边框 */
     background: #FFF;
-    box-shadow: inset 3px 3px 5px #CBCFFC, inset -5px -5px 5px #FFF
+    box-shadow: inset 3px 3px 5px #CBCFFC, inset -5px -5px 5px #FFF /* 内阴影效果 */
 }
 
-
+/* 新网页字体样式 */
 .newweb {
     font-size: 13px
 }
 
+/* 居中样式 */
 .ju {
     text-align: center
 }
 
+/* 底部导航样式 */
 .foot {
     padding: 12px;
     margin-top: 25px;
-    border-radius: 250px;
+    border-radius: 250px; /* 圆形边框 */
     background: #FFF;
-    box-shadow: inset 3px 3px 5px #CBCFFC, inset -3px -3px 5px #FFF;
+    box-shadow: inset 3px 3px 5px #CBCFFC, inset -3px -3px 5px #FFF; /* 内阴影效果 */
     text-align: center
 }
 
+/* 底部导航字体样式 */
 .foot font {
     padding: 5px;
     margin: 0 5px 0 0;
-    border-radius: 250px;
+    border-radius: 250px; /* 圆形边框 */
     background: #FFF;
-    box-shadow: 2px 2px 5px #CBCFFC, -3px -3px 5px #FFF;
-    -webkit-transition-duration: 0.6s;
+    box-shadow: 2px 2px 5px #CBCFFC, -3px -3px 5px #FFF; /* 立体阴影效果 */
+    -webkit-transition-duration: 0.6s; /* 过渡动画时间 */
     transition-duration: 0.6s
 }
 
+/* 底部导航字体 hover 效果 */
 .foot font:hover {
     background-color: #FFF;
-    box-shadow: inset 2px 2px 3px #CBCFFC, inset -3px -3px 3px #FFF
+    box-shadow: inset 2px 2px 3px #CBCFFC, inset -3px -3px 3px #FFF /* 内阴影效果 */
 }
 
+/* 底部导航图标样式 */
 .foot font i {
     line-height: 1.8;
     margin: -5px 6px 0;
     vertical-align: middle;
-    background-image: url(../img/footweb.svg);
+    background-image: url(https://cdn.jsdmirror.com/gh/kaysarsoft/texiao@704fe2758705bcbc7670f0f1414ec0b6b331d059/aixin/aixin.png); /* 爱心图标背景 */
     background-size: 100%;
     width: 15px;
     height: 15px;
     display: inline-block
 }
 
+/* 链接样式 */
 a {
-    text-decoration: none;
+    text-decoration: none; /* 去除下划线 */
     margin-right: 5px
 }
 
+/* 未访问链接样式 */
 a:link {
     color: #000000
 }
 
+/* 已访问链接样式 */
 a:visited {
     color: #000000
 }
 
+/* 鼠标悬停链接样式 */
 a:hover {
     color: #CBCFFC
 }
 
+/* 激活链接样式 */
 a:active {
     color: #CBCFFC
 }
 
+/* 页脚样式 */
 .footer {
     width: 300px;
-    margin: 35px auto;
+    margin: 35px auto; /* 水平居中 */
     font-size: 11px;
     text-align: center;
     bottom: 10px
 }
 
+/* 自定义样式 */
 .custom {
     /*min-height: 70px;
 	text-align: center;*/
     margin: 20px 0;
 }
 
+/* 应用封面样式 */
 #app-cover {
     /*position: absolute;
     top: 50%;
     right: 0;
-    left: 0;*/
-    max-width: 430px;
+    left: 0;
+	max-width: 430px;
     min-width: 100%;
     height: auto;
     /*margin: -4px auto;*/
-    margin-top: 100px;
+	margin-top: 100px;*/
 }
 
-
+/* 背景层样式 */
 #bg-layer {
     position: fixed;
     top: 0;
@@ -244,12 +278,14 @@ a:active {
     z-index: 2;
 }
 
+/* 播放器样式 */
 #player {
     position: relative;
     height: 100%;
     z-index: 3;
 }
 
+/* 播放器轨道样式 */
 #player-track {
     position: absolute;
     top: 0;
@@ -257,68 +293,79 @@ a:active {
     left: 15px;
     padding: 13px 22px 10px 184px;
     background-color: #fff7f7;
-    border-radius: 15px 15px 0 0;
-    transition: 0.3s ease top;
+    border-radius: 15px 15px 0 0; /* 圆角边框 */
+    transition: 0.3s ease top; /* 过渡动画效果 */
     z-index: 1;
 }
 
+/* 播放器轨道激活状态 */
 #player-track.active {
     top: -92px;
 }
 
+/* 专辑名称样式 */
 #album-name {
     color: #54576f;
     font-size: 17px;
     font-weight: bold;
 }
 
+/* 轨道名称样式 */
 #track-name {
     color: #acaebd;
     font-size: 13px;
     margin: 2px 0 13px 0;
 }
 
+/* 轨道时间样式 */
 #track-time {
     height: 12px;
     margin-bottom: 3px;
     overflow: hidden;
 }
 
+/* 当前时间样式 */
 #current-time {
     float: left;
 }
 
+/* 轨道长度样式 */
 #track-length {
     float: right;
 }
 
+/* 时间显示样式 */
 #current-time,
 #track-length {
     color: transparent;
     font-size: 11px;
     background-color: #ffe8ee;
-    border-radius: 10px;
-    transition: 0.3s ease all;
+    border-radius: 10px; /* 圆角边框 */
+    transition: 0.3s ease all; /* 过渡动画效果 */
 }
 
+/* 时间显示激活状态 */
 #track-time.active #current-time,
 #track-time.active #track-length {
     color: #f86d92;
     background-color: transparent;
 }
 
+/* 进度条区域样式 */
 #s-area,
 #seek-bar {
     position: relative;
     height: 4px;
-    border-radius: 4px;
+    border-radius: 4px; /* 圆角边框 */
 }
 
+/* 进度条可点击区域 */
 #s-area {
     background-color: #ffe8ee;
     cursor: pointer;
 }
 
+/* 时间提示样式 */
 #ins-time {
     position: absolute;
     top: -29px;
@@ -326,10 +373,11 @@ a:active {
     font-size: 12px;
     white-space: pre;
     padding: 5px 6px;
-    border-radius: 4px;
+    border-radius: 4px; /* 圆角边框 */
     display: none;
 }
 
+/* 进度条悬停效果 */
 #s-hover {
     position: absolute;
     top: 0;
@@ -339,11 +387,13 @@ a:active {
     z-index: 2;
 }
 
+/* 时间提示和悬停效果背景 */
 #ins-time,
 #s-hover {
     background-color: #3b3d50;
 }
 
+/* 进度条样式 */
 #seek-bar {
     content: '';
     position: absolute;
@@ -352,19 +402,21 @@ a:active {
     left: 0;
     width: 0;
     background-color: #fd6d94;
-    transition: 0.2s ease width;
+    transition: 0.2s ease width; /* 过渡动画效果 */
     z-index: 1;
 }
 
+/* 播放器内容样式 */
 #player-content {
     position: relative;
     height: 100%;
     background-color: #fff;
-    box-shadow: 0 30px 80px #656565;
-    border-radius: 15px;
+    box-shadow: 0 30px 80px #656565; /* 阴影效果 */
+    border-radius: 15px; /* 圆角边框 */
     z-index: 2;
 }
 
+/* 专辑封面样式 */
 #album-art {
     position: absolute;
     top: -40px;
@@ -373,17 +425,19 @@ a:active {
     margin-left: 40px;
     -webkit-transform: rotateZ(0);
     transform: rotateZ(0);
-    transition: 0.3s ease all;
+    transition: 0.3s ease all; /* 过渡动画效果 */
     box-shadow: 0 0 0 10px #fff;
-    border-radius: 50%;
+    border-radius: 50%; /* 圆形封面 */
     overflow: hidden;
 }
 
+/* 专辑封面激活状态 */
 #album-art.active {
     top: -60px;
     box-shadow: 0 0 0 4px #fff7f7, 0 30px 50px -15px #afb7c1;
 }
 
+/* 专辑封面装饰 */
 #album-art:before {
     content: '';
     position: absolute;
@@ -394,11 +448,12 @@ a:active {
     height: 20px;
     margin: -10px auto 0 auto;
     background-color: #d6dee7;
-    border-radius: 50%;
+    border-radius: 50%; /* 圆形装饰 */
     box-shadow: inset 0 0 0 2px #fff;
     z-index: 2;
 }
 
+/* 专辑封面图片 */
 #album-art img {
     display: block;
     position: absolute;
@@ -410,17 +465,20 @@ a:active {
     z-index: -1;
 }
 
+/* 专辑封面图片激活状态 */
 #album-art img.active {
     opacity: 1;
     z-index: 1;
 }
 
+/* 专辑封面旋转动画 */
 #album-art.active img.active {
     z-index: 1;
     -webkit-animation: rotateAlbumArt 3s linear 0s infinite forwards;
     animation: rotateAlbumArt 3s linear 0s infinite forwards;
 }
 
+/* 专辑封面旋转动画定义 */
 @-webkit-keyframes rotateAlbumArt {
     0% {
         -webkit-transform: rotateZ(0);
@@ -445,6 +503,7 @@ a:active {
     }
 }
 
+/* 缓冲盒子样式 */
 #buffer-box {
     position: absolute;
     top: 50%;
@@ -464,25 +523,30 @@ a:active {
     z-index: 2;
 }
 
+/* 专辑封面图片和缓冲盒子过渡效果 */
 #album-art img,
 #buffer-box {
     transition: 0.1s linear all;
 }
 
+/* 专辑封面缓冲状态 */
 #album-art.buffering img {
     opacity: 0.25;
 }
 
+/* 专辑封面缓冲状态激活 */
 #album-art.buffering img.active {
     opacity: 0.8;
     filter: blur(2px);
     -webkit-filter: blur(2px);
 }
 
+/* 缓冲盒子显示 */
 #album-art.buffering #buffer-box {
     opacity: 1;
 }
 
+/* 播放器控制样式 */
 #player-controls {
     width: 250px;
     height: 100%;
@@ -491,21 +555,24 @@ a:active {
     overflow: hidden;
 }
 
+/* 控制按钮样式 */
 .control {
     width: 33.333%;
     float: left;
     padding: 12px 0;
 }
 
+/* 按钮样式 */
 .button {
     width: 26px;
     height: 26px;
     padding: 25px;
     background-color: #fff;
-    border-radius: 6px;
+    border-radius: 6px; /* 圆角边框 */
     cursor: pointer;
 }
 
+/* 按钮图标样式 */
 .button i {
     display: block;
     color: #d6dee7;
@@ -514,19 +581,23 @@ a:active {
     line-height: 1;
 }
 
+/* 按钮过渡效果 */
 .button,
 .button i {
     transition: 0.2s ease all;
 }
 
+/* 按钮 hover 效果 */
 .button:hover {
     background-color: #d6d6de;
 }
 
+/* 按钮图标 hover 效果 */
 .button:hover i {
     color: #fff;
 }
 
+/* 关注链接样式 */
 #follow-me-link {
     top: 10px;
     font-size: 13px;
@@ -535,6 +606,7 @@ a:active {
     border-radius: 2px;
 }
 
+/* 分享链接样式 */
 #share-link {
     top: 45px;
     width: 16px;
@@ -542,9 +614,10 @@ a:active {
     padding: 10px;
     font-size: 16px;
     background-color: #7dca24;
-    border-radius: 50%;
+    border-radius: 50%; /* 圆形边框 */
 }
 
+/* 链接通用样式 */
 #follow-me-link,
 #share-link {
     position: fixed;

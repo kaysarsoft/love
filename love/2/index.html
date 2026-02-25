@@ -1,53 +1,61 @@
 <!DOCTYPE html>
+<!-- 声明文档类型为 HTML5 -->
 <html lang="zh-CN">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>turakiz</title>
-    <link rel="shortcut icon" href="https://pic.imgdb.cn/item/66449ed60ea9cb1403009d90.png">
-    <link rel="stylesheet" href="style.css">
+    <!-- 元信息设置 -->
+    <meta charset="UTF-8"> <!-- 设置字符集为 UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 设置视口，确保在移动设备上正确显示 -->
+    <title>turakiz</title> <!-- 页面标题，显示在浏览器标签栏 -->
+    <link rel="shortcut icon" href="https://pic.imgdb.cn/item/66449ed60ea9cb1403009d90.png"> <!-- 设置网站图标为心形图标 -->
+    <link rel="stylesheet" href="style.css"> <!-- 引入本地样式文件 -->
+    
     <!-- 音乐播放器开始 -->
     <!-- require APlayer -->
-    <link rel="stylesheet" href="https://cdn.jsdmirror.cn/npm/aplayer/dist/APlayer.min.css">
-    <script src="https://cdn.jsdmirror.cn/npm/aplayer/dist/APlayer.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdmirror.cn/npm/aplayer/dist/APlayer.min.css"> <!-- 引入 APlayer 样式 -->
+    <script src="https://cdn.jsdmirror.cn/npm/aplayer/dist/APlayer.min.js"></script> <!-- 引入 APlayer 脚本 -->
     <!-- require MetingJS -->
-    <script src="https://cdn.jsdmirror.com/gh/lemonmous/Source-material@1.0/js/Meting.min.js"></script>
+    <script src="https://cdn.jsdmirror.com/gh/lemonmous/Source-material@1.0/js/Meting.min.js"></script> <!-- 引入 MetingJS 脚本 -->
     <meting-js fixed="true" autoplay="true" theme="#409EFF" list-folded="true" mini="true"
-        auto="https://music.163.com/#/song?id=2739463382"></meting-js>
+        auto="https://music.163.com/#/song?id=2739463382"></meting-js> <!-- 配置音乐播放器，自动播放指定歌曲 -->
      <style>
-        .aplayer-body {display: none!important;}
+        .aplayer-body {display: none!important;} /* 隐藏播放器主体，只保留控制按钮 */
     </style>
     <!-- 音乐播放器结束 -->
 </head>
 <body>
 </div>
+    <!-- 主容器 -->
     <div class="container">
+        <!-- 内容区域 -->
         <div class="content">
+            <!-- 爱情信息区域 -->
             <div class="love-message">
-                <h2>❤❤turakiz❤❤</h2>
-                <p>2026年是马年，一个充满活力和希望的年份。</p>
-                <p>就像骏马奔腾，我的心也一直在向你靠近。</p>
-                <p>马年大吉，我想对你说：</p>
-                <div class="highlight">
-                    <p>我爱你，就像马儿爱草原，</p>
-                    <p>就像星星爱夜空，</p>
-                    <p>就像阳光爱大地。</p>
+                <h2>❤❤turakiz❤❤</h2> <!-- 标题 -->
+                <p>2026年是马年，一个充满活力和希望的年份。</p> <!-- 描述文字 -->
+                <p>就像骏马奔腾，我的心也一直在向你靠近。</p> <!-- 描述文字 -->
+                <p>马年大吉，我想对你说：</p> <!-- 描述文字 -->
+                <div class="highlight"> <!-- 高亮区域 -->
+                    <p>我爱你，就像马儿爱草原，</p> <!-- 爱情宣言 -->
+                    <p>就像星星爱夜空，</p> <!-- 爱情宣言 -->
+                    <p>就像阳光爱大地。</p> <!-- 爱情宣言 -->
                 </div>
-                <p>愿我们的爱情像骏马一样勇往直前，</p>
-                <p>在新的一年里马到成功，幸福美满！</p>
+                <p>愿我们的爱情像骏马一样勇往直前，</p> <!-- 祝福语 -->
+                <p>在新的一年里马到成功，幸福美满！</p> <!-- 祝福语 -->
             </div>
 
+            <!-- 倒计时区域 -->
             <div class="countdown">
-
+                <!-- 微信好友时间 -->
                 <div class="wechat-time">
-                    <h4>我们已经成为微信好友</h4>
-                    <div id="wechat-timer"></div>
+                    <h4>我们已经成为微信好友</h4> <!-- 小标题 -->
+                    <div id="wechat-timer"></div> <!-- 倒计时显示区域 -->
                 </div>
+                <!-- 微信消息 -->
                 <div class="wechat-message">
-                    <p>从此，我们的联系更加紧密</p>
-                    <p>微信的每一次消息，都是我对你的思念</p>
-                    <p>愿我们的友谊/爱情像微信一样，时刻相连</p>
+                    <p>从此，我们的联系更加紧密</p> <!-- 描述文字 -->
+                    <p>微信的每一次消息，都是我对你的思念</p> <!-- 描述文字 -->
+                    <p>愿我们的友谊/爱情像微信一样，时刻相连</p> <!-- 祝福语 -->
                 </div>
             </div>
         </div>
@@ -56,20 +64,24 @@
     <script>
         // 计算加微信时间
         function updateWechatTime() {
-            const wechatTime = new Date('2026-02-10 07:22:00');
-            const now = new Date();
-            const diff = now - wechatTime;
+            const wechatTime = new Date('2026-02-10 07:22:00'); // 设置加微信的时间
+            const now = new Date(); // 获取当前时间
+            const diff = now - wechatTime; // 计算时间差（毫秒）
 
+            // 计算天、小时、分、秒
             const days = Math.floor(diff / (1000 * 60 * 60 * 24));
             const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
+            // 更新显示内容
             document.getElementById('wechat-timer').innerHTML =
                 `${days}天 ${hours}时 ${minutes}分 ${seconds}秒`;
         }
 
+        // 初始调用函数，开始计时
         updateWechatTime();
+        // 设置定时器，每秒更新一次
         setInterval(updateWechatTime, 1000);
     </script>
 </body>

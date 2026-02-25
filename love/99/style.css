@@ -1,0 +1,26 @@
+/* 页面主体样式 */
+body {
+    height: 720px; /* 页面高度720px */
+    padding: 0px; /* 内边距0px */
+    margin: 0px; /* 外边距0px */
+}
+
+/* 背景容器样式 */
+.bj {
+    height: 100%; /* 高度100% */
+    width: 100%; /* 宽度100% */
+    background-size: 100% 100%; /* 背景大小覆盖整个容器 */
+    /* background-image: url(images/bj.jpg); */ /* 注释掉的本地背景图片 */
+    background-image: url(https://developer.qcloudimg.com/http-save/yehe-1036137/c1b687fd0d08a73bc123bf3115de6dcf.gif); /* 网络背景动画图片 */
+}
+
+/* 空格样式 */
+.kg {
+    height: 300px; /* 高度300px */
+    width: 50px; /* 宽度50px */
+}
+
+/* 图片样式 */
+img {
+    margin: 50px 50px auto; /* 上下外边距50px，左右外边距50px，水平居中 */
+}

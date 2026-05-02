@@ -80,6 +80,38 @@
         </font>
       </div>
     </div>
+    <!-- 相爱时间计数器 -->
+    <div class="custom">
+      <div class="box">
+        <font><span id="runtime_span"></span>
+          <!-- JavaScript 代码：计算并显示相爱时间 -->
+          <script type="text/javascript">
+            function show_runtime() {
+              // 设置定时器，每秒更新一次
+              window.setTimeout("show_runtime()", 1000); 
+              // 设置起始时间（相爱开始时间）
+              X = new Date("@05/1/2026 015:22:00");
+              // 获取当前时间
+              Y = new Date(); 
+              // 计算时间差（毫秒）
+              T = (Y.getTime() - X.getTime()); 
+              // 一天的毫秒数
+              M = 24 * 60 * 60 * 1000;
+              // 计算天、小时、分、秒
+              a = T / M; A = Math.floor(a); 
+              b = (a - A) * 24; B = Math.floor(b); 
+              c = (b - B) * 60; C = Math.floor((b - B) * 60); 
+              D = Math.floor((c - C) * 60);
+              // 更新显示内容
+              runtime_span.innerHTML = "确定关系已经: " + A + "天" + B + "小时" + C + "分" + D + "秒"
+            } 
+            // 调用函数，开始计时
+            show_runtime();
+          </script>
+          <span id="span_dt"></span>
+        </font>
+      </div>
+    </div>
     
     <!-- 爱情宣言 -->
     <div class="box-box">
